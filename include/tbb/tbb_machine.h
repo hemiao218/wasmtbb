@@ -225,7 +225,7 @@ template<> struct atomic_selector<8> {
         #include "machine/linux_intel64.h"
     #endif
 
-#elif __linux__ || __FreeBSD__ || __NetBSD__ || __OpenBSD__ || __emscripten__
+#elif __linux__ || __FreeBSD__ || __NetBSD__ || __OpenBSD__ || __EMSCRIPTEN__
     #if (TBB_USE_GCC_BUILTINS && __TBB_GCC_BUILTIN_ATOMICS_PRESENT)
         #error "WASM"
         #include "machine/gcc_generic.h"
